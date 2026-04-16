@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<routes>
+    <!-- 车辆类型定义 -->
+    <vType id="car" vClass="passenger" accel="2.6" decel="4.5" sigma="0.5" length="4.5"/>
+    <vType id="bicycle" vClass="bicycle" accel="1.2" decel="2.0" sigma="0.5" length="1.8" maxSpeed="5.0"/>
+
+    <!-- ================= 早高峰 (07:00-09:00) ================= -->
+    <!-- 小汽车 -->
+    <!-- 南进口 (S1) -->
+    <flow id="S_N_car_early" type="car" from="S1" to="-N1" begin="00:00:00" end="02:00:00" vehsPerHour="300"/>
+    <flow id="S_E_car_early" type="car" from="S1" to="-E1" begin="00:00:00" end="02:00:00" vehsPerHour="130"/>
+    <flow id="S_W_car_early" type="car" from="S1" to="-W1" begin="00:00:00" end="02:00:00" vehsPerHour="60"/>
+
+    <!-- 北进口 (N1) -->
+    <flow id="N_N_car_early" type="car" from="N1" to="-S1" begin="00:00:00" end="02:00:00" vehsPerHour="400"/>
+    <flow id="N_W_car_early" type="car" from="N1" to="-W1" begin="00:00:00" end="02:00:00" vehsPerHour="340"/>
+    <flow id="N_E_car_early" type="car" from="N1" to="-E1" begin="00:00:00" end="02:00:00" vehsPerHour="210"/>
+
+    <!-- 东进口 (E1) -->
+    <flow id="E_W_car_early" type="car" from="E1" to="-W1" begin="00:00:00" end="02:00:00" vehsPerHour="800"/>
+    <flow id="E_N_car_early" type="car" from="E1" to="-N1" begin="00:00:00" end="02:00:00" vehsPerHour="200"/>
+    <flow id="E_S_car_early" type="car" from="E1" to="-S1" begin="00:00:00" end="02:00:00" vehsPerHour="120"/>
+
+    <!-- 西进口 (W1) -->
+    <flow id="W_E_car_early" type="car" from="W1" to="-E1" begin="00:00:00" end="02:00:00" vehsPerHour="700"/>
+    <flow id="W_N_car_early" type="car" from="W1" to="-N1" begin="00:00:00" end="02:00:00" vehsPerHour="150"/>
+    <flow id="W_S_car_early" type="car" from="W1" to="-S1" begin="00:00:00" end="02:00:00" vehsPerHour="156"/>  
+
+    <!-- 非机动车 -->
+    <!-- 北向南 -->
+    <flow id="N_S_bike_early" type="bicycle" from="N1" to="-S1" begin="00:00:00" end="02:00:00" vehsPerHour="500"/>
+    <flow id="N_W_bike_early" type="bicycle" from="N1" to="-W1" begin="00:00:00" end="02:00:00" vehsPerHour="278"/>
+    <flow id="N_E_bike_early" type="bicycle" from="N1" to="-E1" begin="00:00:00" end="02:00:00" vehsPerHour="100"/>
+    <!-- 南向北 -->
+    <flow id="S_N_bike_early" type="bicycle" from="S1" to="-N1" begin="00:00:00" end="02:00:00" vehsPerHour="578"/>
+    <flow id="S_E_bike_early" type="bicycle" from="S1" to="-E1" begin="00:00:00" end="02:00:00" vehsPerHour="356"/>
+    <flow id="S_W_bike_early" type="bicycle" from="S1" to="-W1" begin="00:00:00" end="02:00:00" vehsPerHour="60"/>
+    <!-- 西向东 -->
+    <flow id="W_E_bike_early" type="bicycle" from="W1" to="-E1" begin="00:00:00" end="02:00:00" vehsPerHour="456"/>
+    <flow id="W_S_bike_early" type="bicycle" from="W1" to="-S1" begin="00:00:00" end="02:00:00" vehsPerHour="120"/>
+    <flow id="W_N_bike_early" type="bicycle" from="W1" to="-N1" begin="00:00:00" end="02:00:00" vehsPerHour="20"/>
+    <!-- 东向西 -->
+    <flow id="E_W_bike_early" type="bicycle" from="E1" to="-W1" begin="00:00:00" end="02:00:00" vehsPerHour="547"/>
+    <flow id="E_N_bike_early" type="bicycle" from="E1" to="-N1" begin="00:00:00" end="02:00:00" vehsPerHour="244"/>
+    <flow id="E_S_bike_early" type="bicycle" from="E1" to="-S1" begin="00:00:00" end="02:00:00" vehsPerHour="120"/>
+
+    <!-- ================= 平峰 (09:00-16:00) ================= -->
+    <!-- 小汽车 -->
+    <!-- 南进口 (S1) -->
+    <flow id="S_N_car_mid" type="car" from="S1" to="-N1" begin="02:00:00" end="09:00:00" vehsPerHour="600"/>
+    <flow id="S_E_car_mid" type="car" from="S1" to="-E1" begin="02:00:00" end="09:00:00" vehsPerHour="183"/>
+    <flow id="S_W_car_mid" type="car" from="S1" to="-W1" begin="02:00:00" end="09:00:00" vehsPerHour="50"/>
+
+    <!-- 北进口 (N1) -->
+    <flow id="N_N_car_mid" type="car" from="N1" to="-S1" begin="02:00:00" end="09:00:00" vehsPerHour="734"/>
+    <flow id="N_W_car_mid" type="car" from="N1" to="-W1" begin="02:00:00" end="09:00:00" vehsPerHour="144"/>
+    <flow id="N_E_car_mid" type="car" from="N1" to="-E1" begin="02:00:00" end="09:00:00" vehsPerHour="46"/>
+
+    <!-- 东进口 (E1)  -->
+    <flow id="E_W_car_mid" type="car" from="E1" to="-W1" begin="02:00:00" end="09:00:00" vehsPerHour="870"/>
+    <flow id="E_N_car_mid" type="car" from="E1" to="-N1" begin="02:00:00" end="09:00:00" vehsPerHour="190"/>
+    <flow id="E_S_car_mid" type="car" from="E1" to="-S1" begin="02:00:00" end="09:00:00" vehsPerHour="87"/>
+
+    <!-- 西进口 (W1) -->
+    <flow id="W_E_car_mid" type="car" from="W1" to="-E1" begin="02:00:00" end="09:00:00" vehsPerHour="800"/>
+    <flow id="W_N_car_mid" type="car" from="W1" to="-N1" begin="02:00:00" end="09:00:00" vehsPerHour="250"/>
+    <flow id="W_S_car_mid" type="car" from="W1" to="-S1" begin="02:00:00" end="09:00:00" vehsPerHour="20"/>
+ 
+    <!-- 非机动车 -->
+    <!-- 北向南 -->
+    <flow id="N_S_bike_mid" type="bicycle" from="N1" to="-S1" begin="02:00:00" end="09:00:00" vehsPerHour="400"/>
+    <flow id="N_W_bike_mid" type="bicycle" from="N1" to="-W1" begin="02:00:00" end="09:00:00" vehsPerHour="100"/>
+    <flow id="N_E_bike_mid" type="bicycle" from="N1" to="-E1" begin="02:00:00" end="09:00:00" vehsPerHour="50"/>
+    <!-- 南向北 -->
+    <flow id="S_N_bike_mid" type="bicycle" from="S1" to="-N1" begin="02:00:00" end="09:00:00" vehsPerHour="340"/>
+    <flow id="S_E_bike_mid" type="bicycle" from="S1" to="-E1" begin="02:00:00" end="09:00:00" vehsPerHour="240"/>
+    <flow id="S_W_bike_mid" type="bicycle" from="S1" to="-W1" begin="02:00:00" end="09:00:00" vehsPerHour="30"/>
+    <!-- 西向东 -->
+    <flow id="W_E_bike_mid" type="bicycle" from="W1" to="-E1" begin="02:00:00" end="09:00:00" vehsPerHour="440"/>
+    <flow id="W_S_bike_mid" type="bicycle" from="W1" to="-S1" begin="02:00:00" end="09:00:00" vehsPerHour="106"/>
+    <flow id="W_N_bike_mid" type="bicycle" from="W1" to="-N1" begin="02:00:00" end="09:00:00" vehsPerHour="20"/>
+    <!-- 东向西 -->
+    <flow id="E_W_bike_mid" type="bicycle" from="E1" to="-W1" begin="02:00:00" end="09:00:00" vehsPerHour="560"/>
+    <flow id="E_N_bike_mid" type="bicycle" from="E1" to="-N1" begin="02:00:00" end="09:00:00" vehsPerHour="130"/>
+    <flow id="E_S_bike_mid" type="bicycle" from="E1" to="-S1" begin="02:00:00" end="09:00:00" vehsPerHour="70"/>
+
+    <!-- ================= 晚高峰 (16:00-19:00) ================= -->
+    <!-- 小汽车 -->
+    <!-- 南进口 (S1) -->
+    <flow id="S_N_car_evening" type="car" from="S1" to="-N1" begin="09:00:00" end="12:00:00" vehsPerHour="700"/>
+    <flow id="S_E_car_evening" type="car" from="S1" to="-E1" begin="09:00:00" end="12:00:00" vehsPerHour="170"/>
+    <flow id="S_W_car_evening" type="car" from="S1" to="-W1" begin="09:00:00" end="12:00:00" vehsPerHour="240"/>
+
+    <!-- 北进口 (N1) -->
+    <flow id="N_N_car_evening" type="car" from="N1" to="-S1" begin="09:00:00" end="12:00:00" vehsPerHour="630"/>
+    <flow id="N_W_car_evening" type="car" from="N1" to="-W1" begin="09:00:00" end="12:00:00" vehsPerHour="120"/>
+    <flow id="N_E_car_evening" type="car" from="N1" to="-E1" begin="09:00:00" end="12:00:00" vehsPerHour="200"/>
+
+    <!-- 东进口 (E1)  -->
+    <flow id="E_W_car_evening" type="car" from="E1" to="-W1" begin="09:00:00" end="12:00:00" vehsPerHour="800"/>
+    <flow id="E_N_car_evening" type="car" from="E1" to="-N1" begin="09:00:00" end="12:00:00" vehsPerHour="150"/>
+    <flow id="E_S_car_evening" type="car" from="E1" to="-S1" begin="09:00:00" end="12:00:00" vehsPerHour="170"/>
+
+    <!-- 西进口 (W1) -->
+    <flow id="W_E_car_eveving" type="car" from="W1" to="-E1" begin="09:00:00" end="12:00:00" vehsPerHour="1400"/>
+    <flow id="W_N_car_evening" type="car" from="W1" to="-N1" begin="09:00:00" end="12:00:00" vehsPerHour="400"/>
+    <flow id="W_S_car_evening" type="car" from="W1" to="-S1" begin="09:00:00" end="12:00:00" vehsPerHour="360"/>
+
+    <!-- 非机动车 -->
+    <!-- 北向南 -->
+    <flow id="N_S_bike_evening" type="bicycle" from="N1" to="-S1" begin="09:00:00" end="12:00:00" vehsPerHour="500"/>
+    <flow id="N_W_bike_evening" type="bicycle" from="N1" to="-W1" begin="09:00:00" end="12:00:00" vehsPerHour="40"/>
+    <flow id="N_E_bike_evening" type="bicycle" from="N1" to="-E1" begin="09:00:00" end="12:00:00" vehsPerHour="40"/>
+    <!-- 南向北 -->
+    <flow id="S_N_bike_evening" type="bicycle" from="S1" to="-N1" begin="09:00:00" end="12:00:00" vehsPerHour="359"/>
+    <flow id="S_E_bike_evening" type="bicycle" from="S1" to="-E1" begin="09:00:00" end="12:00:00" vehsPerHour="97"/>
+    <flow id="S_W_bike_evening" type="bicycle" from="S1" to="-W1" begin="09:00:00" end="12:00:00" vehsPerHour="30"/>
+    <!-- 西向东 -->
+    <flow id="W_E_bike_eveving" type="bicycle" from="W1" to="-E1" begin="09:00:00" end="12:00:00" vehsPerHour="657"/>
+    <flow id="W_S_bike_evening" type="bicycle" from="W1" to="-S1" begin="09:00:00" end="12:00:00" vehsPerHour="120"/>
+    <flow id="W_N_bike_evening" type="bicycle" from="W1" to="-N1" begin="09:00:00" end="12:00:00" vehsPerHour="32"/>
+    <!-- 东向西 -->
+    <flow id="E_W_bike_evening" type="bicycle" from="E1" to="-W1" begin="09:00:00" end="12:00:00" vehsPerHour="560"/>
+    <flow id="E_N_bike_evening" type="bicycle" from="E1" to="-N1" begin="09:00:00" end="12:00:00" vehsPerHour="79"/>
+    <flow id="E_S_bike_evening" type="bicycle" from="E1" to="-S1" begin="09:00:00" end="12:00:00" vehsPerHour="34"/>
+</routes>

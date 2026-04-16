@@ -1,0 +1,1 @@
+vehicle_id,timestep,x,y,speed,acceleration,angle,road_id,lane_id,route,type_id,leader_id,distance_to_leader
